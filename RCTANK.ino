@@ -20,7 +20,12 @@ int Lforward = 8; // Left forward pin
 int Reverse = 9; // Reverse pin
 
 
-boolean running = false;
+/*
+------------------------------------------------------------------------------------------------------
+Here we set up the arduino IP address for the router.
+You'll need to set your wifi router as a repeater with DHCP turned off for this to work. 
+------------------------------------------------------------------------------------------------------
+*/ 
 
 byte mac[] = {
   0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED
@@ -39,8 +44,11 @@ EthernetServer server(777); //server port
 String readString;
 
 
+// ------------------------------------------------------------------------------------------------------
 
 
+
+// Here we set up the sensor pins and the motor pins.
 void setup()
 {
 
@@ -61,7 +69,7 @@ void setup()
   Serial.println("Initialisation complete");   //check that setup has completed (in serial monitor)
 }
 
-void go_right()
+void go_right()  // The arduino will skip these commands until go_right() is called either by either a response to sensors or HTML input.
 { digitalWrite(Rforward, HIGH);
   delay(400);
   digitalWrite(Rforward, LOW);
