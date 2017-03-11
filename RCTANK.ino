@@ -24,6 +24,8 @@ int Reverse = 9; // Reverse pin
 ------------------------------------------------------------------------------------------------------
 Here we set up the arduino IP address for the router.
 You'll need to set your wifi router as a repeater with DHCP turned off for this to work. 
+
+You'll also need to hook a wired IP camera up to the router for first person view. Any MJPG/RTSP camera will work great
 ------------------------------------------------------------------------------------------------------
 */ 
 
