@@ -70,21 +70,21 @@ void go_right()
 
 void go_rvrs()
 {
-  digitalWrite(Reverse, HIGH); // turn forward motor off
+  digitalWrite(Reverse, HIGH); // turn reverse motor on
   delay(500);
-  digitalWrite(Reverse, LOW); // turn reverse motor on
+  digitalWrite(Reverse, LOW); // turn reverse motor off
 
 }
 
 void go_forward()
 {
   Serial.println("moving forward");
-  digitalWrite(Lforward, HIGH); // turn forward motor off
+  digitalWrite(Lforward, HIGH);  // turn left forward motor on
 delay(400);
-  digitalWrite(Rforward, HIGH); // turn forward motor off
+  digitalWrite(Rforward, HIGH);   // turn right forward motor on
 
-  digitalWrite(Lforward, LOW);
-  digitalWrite(Rforward, LOW);
+  digitalWrite(Lforward, LOW);  // turn left forward motor off
+  digitalWrite(Rforward, LOW);  // turn right forward motor off
 
   loop();
 }
